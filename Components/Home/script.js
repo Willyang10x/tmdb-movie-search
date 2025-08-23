@@ -147,7 +147,20 @@ async function exibirFilmes(lista) {
 
     containerFilmes.appendChild(cartaoFilme);
   }
+
 }
+
+/* ===============================
+    pesquisa ao digitar (input)
+   =============================== */
+let timeout;
+inputPesquisa.addEventListener("input", () => {
+  clearTimeout(timeout);
+  timeout = setTimeout(() => {
+    if(inputPesquisa.value.trim()) buscarFilmes(inputPesquisa.value.trim());
+  }, 500);
+});
+
 
 /* ===============================
    Ao carregar a página, mostrar filmes recentes
