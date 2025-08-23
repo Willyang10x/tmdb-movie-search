@@ -1,0 +1,100 @@
+/* ===============================
+   Estilos gerais do site
+   =============================== */
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===============================
+   Cabeçalho
+   =============================== */
+header {
+  padding: 20px;
+  background: #222;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-movie{
+  height: 60px;
+  width: 60px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* ===============================
+   Barra de pesquisa
+   =============================== */
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 250px;
+  outline: none;
+}
+
+button {
+  padding: 10px 15px;
+  margin-left: 5px;
+  border-radius: 5px;
+  border: none;
+  background: #e50914;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #b20710;
+}
+
+/* ===============================
+   Container dos filmes
+   =============================== */
+#movieContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+/* ===============================
+   Cartão do filme
+   =============================== */
+.movie-card {
+  background: #1c1c1c;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: left;
+  transition: transform 0.2s;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-card img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.movie-card h3 {
+  font-size: 18px;
+  margin: 5px 0;
+  color: #e50914;
+}
+
+.movie-card p {
+  font-size: 14px;
+  line-height: 1.4;
+}
