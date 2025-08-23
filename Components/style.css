@@ -22,6 +22,14 @@ header {
   z-index: 1000;
 }
 
+.logo-movie{
+  height: 60px;
+  width: 60px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
 /* ===============================
    Barra de pesquisa
    =============================== */
