@@ -102,7 +102,6 @@ function criarModal(filme, trailerUrl, provedores) {
       <p>${filme.overview || "Sem sinopse disponível."}</p>
       <p><strong>Disponível em:</strong> ${provedoresText}</p>
       ${trailerUrl ? `<iframe width="100%" height="300" src="https://www.youtube.com/embed/${trailerUrl.split("v=")[1]}?autoplay=1" frameborder="0" allowfullscreen></iframe>` : ""}
-      ${trailerUrl ? `<iframe width="100%" height="300" src="https://www.youtube.com/embed/${trailerUrl.split("v=")[1]}" frameborder="0" allowfullscreen></iframe>` : ""}
     </div>
   `;
 
