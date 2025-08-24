@@ -89,6 +89,7 @@ async function buscarOndeAssistir(filmeId) {
 function criarModal(filme, trailerUrl, provedores) {
   const modal = document.createElement("div");
   modal.classList.add("modal", "mostrar"); // Adiciona a classe mostrar para exibir
+  modal.classList.add("modal");
 
   const provedoresText = provedores.length > 0 ? provedores.map(p => p.provider_name).join(", ") : "Não disponível";
 
@@ -101,6 +102,7 @@ function criarModal(filme, trailerUrl, provedores) {
       <p>${filme.overview || "Sem sinopse disponível."}</p>
       <p><strong>Disponível em:</strong> ${provedoresText}</p>
       ${trailerUrl ? `<iframe width="100%" height="300" src="https://www.youtube.com/embed/${trailerUrl.split("v=")[1]}?autoplay=1" frameborder="0" allowfullscreen></iframe>` : ""}
+      ${trailerUrl ? `<iframe width="100%" height="300" src="https://www.youtube.com/embed/${trailerUrl.split("v=")[1]}" frameborder="0" allowfullscreen></iframe>` : ""}
     </div>
   `;
 
@@ -113,6 +115,8 @@ function criarModal(filme, trailerUrl, provedores) {
   modal.querySelector(".fechar").addEventListener("click", () => modal.remove());
 
   // Fechar modal ao clicar fora do conteúdo
+
+  modal.querySelector(".fechar").addEventListener("click", () => modal.remove());
   modal.addEventListener("click", e => { if (e.target === modal) modal.remove(); });
 }
 
